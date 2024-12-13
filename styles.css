@@ -1,0 +1,462 @@
+:root {
+
+	--body-text: #000000;
+	--brand-color: #841844;
+	--grey-color: #6C6E7B;
+	--light-grey: #ECF2F5;
+	--border-color: #9B407A;
+	--white-color: #FFFFFF;
+	--logo-color: #2C145E;
+}
+
+* {	
+	margin: 0px;
+	padding: 0px;
+}
+
+*, *::before, 
+*::after {
+	box-sizing: border-box;
+}
+
+HTML, BODY { 
+    min-height: 100vh;
+}
+
+BODY {
+    display: flex;
+    flex-direction: column;
+          
+	font-family: "Open sans";
+	font-weight: 400;
+	font-size: 20px;
+}
+
+
+HEADER {
+
+	font-size: 0;
+	border-bottom: 1px solid var(--grey-color);
+}
+
+h1 {
+	font-size: 64px;
+	font-weight: 600;
+
+}
+h2 {
+	font-size: 32px;
+	font-weight: 600;
+
+}
+
+
+/*Универсальные элементы*/
+ 
+.content{
+flex-grow:1; 
+}
+
+
+ .wrapper 
+{	margin: 0 auto;
+	padding: 0 10.42% 0;
+	max-width: 1920px;
+
+
+} 
+
+ a, a:visited {
+    color: inherit;       
+    text-decoration: none;  
+}
+
+
+
+
+/* 404 страничка начало */
+.error
+{	display: flex;
+    align-items: center;  
+    flex-direction: column;
+    margin: 10% 0;
+
+}
+
+
+ .error a, a:visited {
+
+    text-decoration: underline;  /* Убирает подчеркивание при наведении */
+}
+/* 404 страничка конец */
+
+
+/* HEADER начало */
+.full-logo-container {
+	margin: 40px 0px 40px;
+	display: flex;
+	align-items: center;
+	max-height: 100%;
+
+}
+
+.logo-text-container {
+	padding-left: 24px;
+    text-transform: uppercase; 
+	font-family: "Segoe UI";
+	color: var(--logo-color);
+	font-size: 28px;
+	justify-content: center;
+}
+
+/* HEADER конец */
+
+
+
+
+/* FOOTER начало */
+FOOTER {
+
+.footer-text
+{
+padding:77px 0 82px;
+border-top: 1px solid var(--grey-color);
+}
+}
+
+/* FOOTER конец */
+
+
+
+
+
+/* HOME начало */
+.banner-container__text{	
+	max-height: 646px;
+	display: flex;             
+    flex-direction: column;  
+    height: inherit ;    
+    justify-content: center; 
+	background: solid red;
+
+
+}
+
+
+
+.banner-container__text h1 {
+padding-bottom: 30px;
+}
+
+
+.banner-container__text p {
+font-size: 32px;
+weight: 400;
+}
+
+
+
+.container-newslabel  {
+margin-bottom: 60px;
+ }
+
+
+.news-grid {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	row-gap: 82px;
+	column-gap: 40px;
+	margin-bottom: 83px;
+}
+
+
+
+.news-grid__item p, h2 {
+	padding: 0;
+	margin: 0;
+}
+
+.news-grid__item {
+
+	max-width: 740px;
+	display: grid;
+    grid-template-rows: auto  auto 1fr auto;  
+    grid-template-columns: 1fr;  
+	row-gap: 30px;
+
+}
+
+
+.date
+{	width: 118px;
+	color: var(--grey-color);
+	background-color: var(--light-grey);
+	border-radius: 20px;
+	text-align: center;
+	
+	padding-top: 6px;
+	padding-bottom: 6px;
+}
+
+
+.news-details__item h2 {
+	margin-top: 40px;
+	margin-bottom: 40px;
+	color: var(--brand-color);
+
+}
+
+.news-details__item p {
+	margin-bottom: 22px;
+}
+
+
+
+.button
+{	text-transform: uppercase;
+	color: var(--brand-color);
+	font-size: 32px;
+	font-weight: 600;
+	font-size:16px;
+	padding-top: 16px;
+	padding-bottom: 16px;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	grid-gap:20px; 
+
+	border: 3px var(--border-color);
+	border-style: solid;
+	border-radius: 50px;
+	width: 216px;
+
+ 	transition: background-color 0.2s ease-in, color 0.2s ease-in;
+
+ 	margin: 0px;
+
+
+}
+
+.button p
+{	margin: 0;
+	color: inherit;
+
+
+}
+
+
+
+
+.news-grid__item:hover h2 {
+
+	color: var(--brand-color);
+}
+
+.nav-button:hover, .news-grid__item:hover  .button, .button:hover  {
+    background-color: var(--brand-color); /* Цвет фона при наведении */
+    color: var(--white-color);
+        }
+
+.news-grid__item:hover .arrow div, .button:hover  .arrow div,  .nav-button--arrow:hover  .arrow div {
+    background-color: var(--white-color); /* Цвет стрелочки при наведении */
+}
+
+
+
+
+
+
+
+
+
+.navigation {
+	justify-content: right;
+	color: var(--brand-color);
+	display: flex; 
+	 flex-wrap: wrap;
+	 column-gap: 16px; 
+	 font-size: 16px;
+	 font-weight: 600;
+	 margin-bottom: 83px;
+
+}
+
+.links-nav a:hover, .banner-container__text h1:hover
+{text-decoration: underline;
+
+}
+
+.nav-button--arrow{
+width: 106px;
+}
+
+
+
+.nav-button {
+ display: flex;
+
+ min-height: 54px;
+ min-width: 54px;
+ justify-content: center;  
+ align-items: center;  
+
+ padding: 5px; 
+
+ border: 3px solid var(--brand-color);
+ border-radius:  50px;
+
+ background-color: var(--white-color); 
+ transition: background-color 0.2s ease-in, color 0.1s ease-in;
+}
+
+
+.nav-button--active {
+	color: white;
+	background-color: var(--brand-color); 
+
+}
+/* HOME конец */
+
+
+
+
+
+/* DETAILS начало */
+
+
+
+.news-details{
+ display: flex;
+ margin-bottom: 137px;
+ column-gap: 40px;
+}
+
+
+.news-details__item {
+	width: 50%;
+
+}
+
+.news-details__container-img  {  
+  width: 50%;
+  align-self: center;
+  justify-self: center;
+}
+
+.news-details__img   {  
+  object-fit: cover;
+  max-height: 500px; 
+  width: 100%; 
+
+}
+ 
+
+.gray-color{
+color: var(--grey-color);
+}
+
+
+.news-title {
+	margin-bottom: 63px;
+} 
+
+
+.news-title h1 {
+margin-top: 0;
+margin-bottom: 0; 
+}
+
+.links-nav p 
+{margin-top: 0;
+margin-bottom: 0; 
+}
+
+.links-nav > * {
+   margin-right: 10px;  /* Добавляет отступ между всеми дочерними элементами */
+}
+
+.links-nav {
+display: flex;
+
+margin-top: 72px;
+margin-bottom: 35px;
+
+}
+
+
+
+
+/* DETAILS конец */
+
+
+
+
+/*-----------------------------------------------------------*/
+/*Конструктор стрелочек*/
+/*-----------------------------------------------------------*/
+
+.arrow div {
+    position: relative;
+    width: 35px;
+    height: 3px;
+    background-color: var(--brand-color);
+    left:0;
+    display: block; 
+
+
+ 	transition: background-color 0.2s ease-in;
+
+}
+
+
+.arrow div::before,
+.arrow div::after
+{  content: '';
+  position: absolute;
+    width: 14px;
+    height: 3px;
+    right: -2.5px;
+    background-color: inherit;
+}
+
+
+.arrow div::after {
+    top: -4px;
+    transform: rotate(45deg);
+}
+.arrow div::before {
+     top: 4px;
+    transform: rotate(-45deg);
+}
+
+.arrow--left{
+    transform: rotate(180deg);
+}
+
+
+.arrow--small .arrow div
+{
+width: 14px;
+transition: background-color 0.2s ease-in;
+background-color: var(--brand-color);
+}
+
+.arrow--small .arrow div::before, .arrow--small .arrow div::after
+{
+width: 10px;
+right: -2px;
+
+}
+
+.arrow--small .arrow div::after {
+    top: -2.6px;
+}
+
+.arrow--small .arrow div::before {
+    top: 2.6px;
+}
+
+
+
+
